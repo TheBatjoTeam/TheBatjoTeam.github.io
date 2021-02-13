@@ -1,0 +1,35 @@
+
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>   
+<main>
+        <div style="text-align:center; margin-bottom: 10px;"><img src="/img/{{page.slug}}-icon.png" style="object-fit: contain; width: 150px;"></div><h1 style="text-align:center;">{{ page.title}}</h1>
+      <div class="content">
+        <div>
+            <h2 style="margin-bottom: 2px">Alice Corona</h2>
+            <p style="margin: 0px"><em>Data Journalist</em></p>
+        </div>
+        <div>
+            <a href="mailto:alice@batjo.eu" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="padding-right: 10px"></i></a>
+            <a href="http://twitter.com/alice_corona" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" style="padding-right: 10px"></i></a>
+            <a href="http://www.alice-corona.nl" target="_blank" rel="noopener noreferrer"><i class="fas fa-home" style="padding-right: 10px"></i></a>
+        </div>
+        <span>{{page.alice }}</span>
+        <div>
+            <h2 style="margin-bottom: 2px">Chi ha ucciso il Conte?</h2>
+            <p style="margin: 0px"><em>Designer & Digital Fabrication Expert</em></p>
+        </div>
+        <div>
+            <a href="mailto:nicolo@batjo.eu" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="padding-right: 10px"></i></a>
+            <a class="social-btn" href="http://twitter.com/Chihauccilconte" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" style="padding-right: 10px"></i></a>
+            <a href="http://cargocollective.com/chihauccisoilconte" target="_blank" rel="noopener noreferrer"><i class="fas fa-home" style="padding-right: 10px"></i></a>
+        </div>
+        <span>{{ page.nicolo }} </span>
+    </div>
+ 
+</main>
+</body>
+{% include footer.html %}
+</html>

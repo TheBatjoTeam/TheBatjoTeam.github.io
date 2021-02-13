@@ -1,0 +1,21 @@
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>   
+    <main>
+    	{% if page.title != 'Terms of Use'%}<div style="text-align:center; margin-bottom: 10px;"><img src="/img/{{page.slug}}-icon.png" style="object-fit: contain; width: 70%;"></div>{% endif %}
+      <h1 style="text-align:center;">{{ page.title}}</h1>
+      <div class="content">{{content}}</div>
+      {% if page.slug == 'workshops' or page.slug == 'services'  %}
+			{% include workshop-form.html %}
+	  {% elsif page.handle =='/cookbook' %}
+    <div class="fullwidth"><p style="font-size: 12px"><em>This is the first BETA version of the cookbook. The team decided to open up and share all the material, even if still in a prototype phase, in the hope of initiating a conversation, receiving feedback on how to improve the cookbook, and learn about individuals and newsrooms interested in trying the recipes. The workflows haven't been widely tested yet, and for this it could be that some steps are unclear to novice users. We recomend that you always start by scanning through the whole workflow to grasp its structure and valuate if it is feasible for the resources you have available. If something seems unclear, don't hesitate to get in touch, and we'll clarify your doubts.</em></p></div>
+<div class="button-cookbook" align="center">
+	<a href="/cookbook/overview"><span class="content">Start   </span><span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></a></div>
+{% endif %}
+    </main>
+
+</body>
+{% include footer.html %}
+</html>

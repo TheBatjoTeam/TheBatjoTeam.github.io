@@ -1,0 +1,61 @@
+<nav>
+	<nav>
+  <a href="/" class="logo"><img class="logo-nav" src={{site.logo}} /></a>	
+	{% if page.language == "en" %}
+<div style="float: left; margin-top: 25px">
+    <div class="dropdown">
+      <button class="dropbtn">The Cookbook</button>
+      <div class="dropdown-content">
+       <a class="sub-dropbtn" href="/cookbook">About</a>
+       <a class="sub-dropbtn" href="/cookbook/overview">Contents</a>
+       <a class="sub-dropbtn" href="/cookbook/data-walk">Data Walk</a>
+       <a class="sub-dropbtn" href="/cookbook/map">3D Data Map</a>
+       <a class="sub-dropbtn" href="/cookbook/light-bars">Light Data Bars</a>
+       <a class="sub-dropbtn" href="/cookbook/resources">Resources</a>
+     </div>
+   </div>
+  <a class="dropbtn" href="/events">Meet us</a>
+  <a class="dropbtn" href="/workshops">Workshops</a>
+  <a class="dropbtn" href="/services">Services</a>
+  <a class="dropbtn" href="/participate">Participate</a>
+  <div class="dropdown">
+      <button class="dropbtn">About</button>
+      <div class="dropdown-content">
+	     <a class="sub-dropbtn" href="/manifesto">Manifesto</a>
+       <a class="sub-dropbtn" href="/digital-fabrication">On digital fabrication</a>
+       <a class="sub-dropbtn" href="/team">Team</a>
+     </div>
+  </div>
+</div>
+
+{% elsif page.language == "it" %}
+<div style="float: left; margin-top: 25px;">
+  <a class="dropbtn" href="/it/cookbook">Il Cookbook</a>
+  <a class="dropbtn" href="/it/events">Dove andremo</a>
+  <a class="dropbtn" href="/it/workshops">Formazione</a>
+  <a class="dropbtn" href="/it/services">Consulenza</a>
+  <a class="dropbtn" href="/it/participate">Partecipa</a>
+  <div class="dropdown">
+      <button class="dropbtn">Info</button>
+      <div class="dropdown-content">
+        <a class="sub-dropbtn" href="/it/manifesto">Manifesto</a>
+        <a class="sub-dropbtn" href="/it/digital-fabrication">La fabbricazione digitale</a>
+        <a class="sub-dropbtn" href="/it/team">Chi siamo</a>
+     </div>
+  </div>
+</div>
+
+{% endif %}
+<span class="language-switcher">
+      {% if page.name contains "index" %}
+      <a class="en" href="{{ site.baseurl }}/">EN</a>
+      <a class="it" href="{{ site.baseurl | append: "/it" }}">IT</a>
+      {% else %}
+       <a class="en" href="{{ site.baseurl | append: page.handle }}">EN</a>
+       <a class="it" href="{{ site.baseurl | append: "/it" | append: page.handle }}">IT</a>
+      {% endif %}
+</span>
+</nav>
+</nav>
+<div class="clear"></div>
+<hr size="1" color="#ccc">

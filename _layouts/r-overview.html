@@ -1,0 +1,104 @@
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>   
+    <main>
+        <div class="fullwidth">{% if page.slug == 'data-walk' %}<div class="r-details" style="padding-bottom: 0px;">{% endif%}<img src={{page.final-output}} style="max-width: 100%; padding-bottom: 0px">{% if page.slug == 'data-walk' %}</div><p><b>Note</b>: for logistics reason, the prototype built for this installation is a smaller, tabletop version of the design, which you can see in the last image of this page. Throughout the next pages, the photos will refer to this smaller object, while the instructions, downloadable files, and information on materials and costs all refer to the big walkable installation. If you wish to develop the tabletop version as well, but need help to figure out how to modify the workflow, get in touch, and we'll let you know what worked in our case.</p>{% elsif page.slug == 'light-bars' %}<p><b>Disclaimer</b>: data in the render image is dummy data, solely made up for demo purposes.</p>{% endif%}</div>
+        <h1 style="text-align: center; margin-bottom: 0px;">{{ page.title}}</h1>
+    	
+<div class="fullwidth">
+<div class="r-details">
+    <div>
+    		<div class="column4">
+    		<h2><i class="fas fa-check"></i> {{page.benefit1}}</h2>
+    		<p>{{page.benefit1-text}}</p>
+    		</div>
+    	<div class="column4">
+    		<h2><i class="fas fa-check"></i> {{page.benefit2}}</h2>
+    		<p>{{page.benefit2-text}}</p>
+    	</div>
+    	<div class="column4">
+    		<h2><i class="fas fa-check"></i> {{page.benefit3}}</h2>
+    		<p>{{page.benefit3-text}}</p>
+    	</div> 
+    	<div class="column4">
+    		<h2><i class="fas fa-check"></i> {{page.benefit4}}</h2>
+    		<p>{{page.benefit4-text}}</p>
+    	</div>
+        <div class="clear"></div> 
+    </div>
+    <div>
+    		<div class="column3">
+    		<h2>Technical difficulty</h2>
+    		{% if page.difficulty == '1' %}
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.difficulty == '2' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.difficulty == '3' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		{% endif %}
+    		</div>
+    	<div class="column3">
+    		<h2>Time needed</h2>
+    		{% if page.time == '1' %}
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.time == '2' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.time == '3' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		{% endif %}
+    	</div>
+    	<div class="column3">
+    		<h2>Estimated cost</h2>
+    		{% if page.cost == '1' %}
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.cost == '2' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="far fa-star"></i>
+    		{% elsif page.cost == '3' %}
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		<i class="fas fa-star"></i>
+    		{% endif %}
+    	</div> 
+        <div class="clear"></div>
+      </div>
+  </div>
+    </div>
+
+      <div class="content"><span class="start">{{page.title}}&nbsp;</span>{{content | remove: '<p>' }}
+
+        
+            {% assign n-var =  page.variations | plus: 0%}
+                {% for i in (1..n-var) %}
+                {% if page.slug == 'data-walk' %}<div class="r-details" style="margin-bottom: 2em; padding-bottom: 0px;"> {% else %}<div style="margin-bottom: 2em; padding-bottom: 0px;">{% endif %}
+                    <img src="/cookbook/{{page.slug}}/img/var{{i}}.png" style="max-width: 100%; margin-bottom: 0px;" />
+                </div>
+                    {% endfor %}
+        
+
+
+      </div>
+<div class="button-cookbook" align="center">
+                <a href="/cookbook"><span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a>
+    <a href="/cookbook/{{page.slug}}/ingredients"><span class="content">What you need   </span><span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></a></div>
+</main>
+</body>
+{% include footer.html %}
+</html>

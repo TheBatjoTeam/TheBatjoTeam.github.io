@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>{{ page.title }} | {{ site.name[page.language] }}</title>
+    <meta name="author" content="batjo">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description[page.language] }}{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    {% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">{% endif %}
+    <meta name="twitter:title" content={{site.name[page.language]}}>
+    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% else %} <meta name="twitter:description" content="{{ site.description[page.language] }}">{% endif %}
+    <meta name="twitter:image" content="https://www.batjo.eu/img/twittercard.png">
+
+<!-- Open Graph -->
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    <meta property="og:url" content="https://www.batjo.eu">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:image" content="https://www.batjo.eu/img/opengraph.png">
+
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="/style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    </head>
+
+<!-- Prism code highlight -->
+{% if page.slug == 'light-bars' and page.chapter == 'model' and page.section == 1 %}
+<link rel="stylesheet"  href="/style/prism.css" />
+{% endif %}

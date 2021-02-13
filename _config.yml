@@ -1,0 +1,17 @@
+name: 
+  en: Batjo - Bits, Atoms and Journalism
+  it: Batjo - Bits, Atoms and Journalism
+description: 
+  en: Research at the intersection of data, journalism, physicality and digital fabrication
+  it: Research at the intersection of data, journalism, physicality and digital fabrication
+exclude: [README.md]
+permalink: pretty
+twitter: batjo_data
+facebook: batjo.data
+github: TheBatjoTeam
+medium: batjo
+email: info@batjo.eu
+vimeo: batjo
+url: www.batjo.eu
+logo: /img/logo.png
+thumbnail: /img/logo-sq.png

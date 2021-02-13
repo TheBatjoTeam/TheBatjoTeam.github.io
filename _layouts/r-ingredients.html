@@ -1,0 +1,70 @@
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>   
+    <main>
+    	
+    	<img src="/img/cookbook/ingredients.png" style="max-width: 100%">
+        <div class="content">
+        <h2>What You Need · {{page.title}}</h2>
+<div class="r-details" style="font-size: 0.8em; padding: 1em; text-align: left;">
+    		<div class="column3">
+    		  <h3>Materials</h3>
+                <ul class="par-list" style="font-size: 0.8em">
+                {% assign n-materials =  page.materials | plus: 0%}
+                {% for i in (1..n-materials) %}
+                    {% assign var-name = "material" | append: {{i}} %}
+                    <li>{{page[var-name]}}</li>
+                    {% endfor %}
+                </ul>
+    		</div>
+            <div class="column3">
+              <h3>Hardware</h3>
+                <ul class="par-list" style="font-size: 0.8em;">
+                {% assign n-hardware =  page.hardware | plus: 0%}
+                {% for i in (1..n-hardware) %}
+                    {% assign var-name = "hardware" | append: {{i}} %}
+                    <li>{{page[var-name]}}</li>
+                    {% endfor %}
+                </ul>
+              </div>
+            <div class="column3">
+              <h3>Software</h3>
+                <ul class="par-list" style="font-size: 0.8em;">
+                {% assign n-software =  page.software | plus: 0%}
+                {% for i in (1..n-software) %}
+                    {% assign var-name = "software" | append: {{i}} %}
+                    <li>{{page[var-name]}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+ <div class="clear"></div>
+            <div class="column2">
+              <h3>Estimated Time</h3>
+                <ul class="par-list" style="font-size: 0.8em;">
+                    <li>Modeling: {{page.estimated-time-modeling}}</li>
+                    <li>Fabrication: {{page.estimated-time-fabrication}}</li>
+                    <li>Assembly: {{page.estimated-time-assembly}}</li>
+                </ul>
+
+            </div>
+            <div class="column2" >
+              <h3>Estimated Costs</h3>
+                <ul class="par-list" style="font-size: 0.8em;">
+                    <li>Materials: {{page.estimated-cost-material}}</li>
+                    <li>Machines: If you don't own the machines, consider renting them at your local FabLab or Hacker Space for about {{page.estimated-cost-machines}}</li>
+                </ul>
+
+            </div>
+<div class="clear"></div>
+</div>
+<p>{{content}}</p>
+</div>
+<div class="button-cookbook" align="center">
+                <a href="/cookbook/{{page.slug}}/"><span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a>
+    <a href="/cookbook/{{page.slug}}/model"><span class="content">3D Modeling   </span><span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></a></div>
+</main>
+</body>
+{% include footer.html %}
+</html>

@@ -1,0 +1,46 @@
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>   
+    <main>
+    	<div style="text-align:center; margin-bottom: 10px;"><img src="/img/{{page.slug}}-icon.png" style="object-fit: contain; width: 150px;"></div><h1 style="text-align:center;">Contents of the cookbook</h1>
+      
+      <div class="content" id="recipes"><p>The cookbook currently contains documentation to reproduce the following journalistic digital fabrication projects.</p>
+<div class="fullwidth" >
+  <div class="container">
+   <div class="r-details">
+      <img src="/cookbook/data-walk/img/final-output.png"></div>
+  <div class="text-block">
+    <h4 style="line-height:2px;">Data Walk</h4>
+    <p>an installation that encourages a fun and intuitive way to interact with data. It consists of one or more large 3D wooden line chart(s) on which the participants can step and walk, thus engaging their sense of balance and touch to perceive the steepness, magnitude and slope of the datapoints and of the overall trend. Workflow can be reused to produce scaled-down versions to install on tables. </p>
+    <p><a href="/cookbook/data-walk" style="color: white; text-decoration: none;"><b>Discover</b>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+  </div>
+</div> 
+
+<div class="container">
+  <img src="/cookbook/map/img/final-output.png">
+  <div class="text-block">
+    <h4 style="line-height:2px;">3D Data Map</h4>
+    <p>a flexible installation that allows you to physically change removable 3D data layers on top of a map and to use the sense of touch to interact with the data. You can insert positive values on top and negative values on the bottom of the map, for an effect that is impossible to really obtain with 2D graphics. The same techniques can be used for data driven extrusion of any type of geometry: grids, administrative boundaries, buildings, etc. With a few small modifications, the same design can be used to produce a series of small multiples 3D maps. And the 3D data layers, when not on the map, can be hanged on a wall as 3D infographic posters.</p>
+     <p><a href="/cookbook/map" style="color: white; text-decoration: none;"><b>Discover</b>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+  </div>
+</div> 
+<div class="container">
+  <img src="/cookbook/light-bars/img/final-output.png">
+  <div class="text-block">
+    <h4 style="line-height:2px;">Light Data Bars</h4>
+    <p>an installation that promotes an informal and participative approach to data. Each LED bar has a switch to set one of the two possible modes. If the switch is in position 1, the number of LEDs that light up is determined by the data. If the switch is in position two, the participant has to try to guess the correct data value by applying an amount of force on a sensor (more force = higher value) and the LEDs light up accordingly to such value. In the interaction, the user is both grasping a general feel of quantities through a non-visual sense, while also being surprised by how close or far its guesses are. </p>
+    <p><a href="/cookbook/light-bars" style="color: white; text-decoration: none;"><b>Discover</b>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+  </div>
+</div> 
+</div>
+    <p>{{content}}</p>
+    <div class="fullwidth"><p style="font-size: 12px"><em>This is the first BETA version of the cookbook. The team decided to open up and share all the material, even if still in a prototype phase, in the hope of initiating a conversation, receiving feedback on how to improve the cookbook, and learn about individuals and newsrooms interested in trying the recipes. The workflows haven't been widely tested yet, and for this it could be that some steps are unclear to novice users. We recomend that you always start by scanning through the whole workflow to grasp its structure and valuate if it is feasible for the resources you have available. If something seems unclear, don't hesitate to get in touch, and we'll clarify your doubts.</em></p></div>
+        <div class="button-cookbook" align="center">
+  <a href="#recipes"><span class="icon"><i class="fas fa-angle-double-up"></i></span><span class="content">    Pick Project</span></a></div>
+    </main>
+
+</body>
+{% include footer.html %}
+</html>

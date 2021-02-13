@@ -1,0 +1,33 @@
+{% include head.html %}
+{% include nav.html %}
+<body>
+  <header>
+  </header>
+    <div class="content">
+      <div class="pitch">
+        <h1 class="pitch">Batjo</h1>
+        {{page.pitch}}
+    </div>
+        <div class="clear"></div>
+
+        <div class="product" style="border-bottom-color: #0089aa6c; ">
+        	<div style="display: flex; align-items:center; margin-bottom: 10px;"><img src="/img/cookbook-icon-home.png" style="object-fit: contain; width: 100px; float: left; padding-right: 15px;"><h2>{{page.product1}}</h2></div>
+        	<span style="display: block;"><a href="/cookbook">Data Driven  News Installations  .</a></span><span style="font-style: italic;font-family: Prata serif;">A Digital Fabrication Cookbook for Journalists {% if page.language == 'it' %} (solo inglese) {% endif %}</span><p style="margin-top: 5px;">{{page.product1-text}}</b></p>
+        </div>
+        <div class="product" style="border-bottom-color: #ffcb006c; ">
+        	<div style="align-items:center; margin-bottom: 10px;"><img src="/img/workshops-icon-home.png" style="object-fit: contain; width: 100px; float: left; padding-right: 15px;"></div>
+          <h2 style="margin-top: 0px;">{{page.product2}}</h2>
+        	<p>{{page.product2-text}}</p>
+          <div class="clear"></div>
+        </div>
+         <div class="product" style="border-bottom-color: #94ac2969; ">
+            <div style="display: flex; align-items:center; margin-bottom: 10px;"><img src="/img/services-icon-home.png" style="object-fit: contain; width: 100px; float: left; padding-right: 15px;"><h2>{{page.product3}}</h2></div>
+            <p>{{page.product3-text}}</p>
+        </div>
+     </div>
+
+</div>
+</div>
+</body>
+{% include footer.html %}
+</html>

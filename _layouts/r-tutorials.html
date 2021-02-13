@@ -1,0 +1,43 @@
+{% include head.html %}
+{% include nav.html %}
+
+<body>
+  <header>
+  </header>   
+    <main>
+        <img src="/img/cookbook/{{page.chapter}}.png" style="max-width: 150px">
+    	<div class="content">
+    		<h2>{{page.chapter-title}} · {{page.title}}</h2>
+
+            <h3>Part {{page.section}} - {{page.section-title}}</h3>
+                <div class="fullwidth"><img src={{page.output-image}}></div>
+
+            {% if page.video == 'yes' %}<h4>Full Video Tutorial</h4>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src={{page.video-link}} style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                {% endif %}
+                {% if page.more_video > 1 %}
+                  {% assign n-var =  page.more_video | plus: 0%}
+                    {% for i in (1..n-var) %}
+                    {% assign var = 'video-link' | append: {{i}} %}
+                <iframe src= "{{page[var]}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    {% endfor %}
+        
+                {% endif %}
+
+                <div class="fullwidth">
+                    <h4>Workflow explanations</h4>
+                     {% if page.download == 'yes' %}<p style="font-size: 14px"><a style="font-size: 18px;" href={{page.download-link}}><i class="fas fa-arrow-alt-circle-down"></i></a>  <em>Download {{page.download-name}} files</em></p>{% endif %}
+                    <hr style="color: #ccc" size="1">
+                   {{content}}
+                    </div>
+        </div>
+        <div class="button-cookbook" align="center">
+            <a href="/cookbook/{{page.slug}}/{{page.previous}}"><span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a>
+    <a href="/cookbook/{{page.slug}}/{{page.next}}"><span class="content">{{page.next-text}}  </span><span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></a></div>
+</main>
+</body>
+{% if page.slug == 'light-bars' and page.chapter == 'model' and page.section == 1 %}
+<script src="/js/prism.js"></script>
+{% endif %}
+{% include footer.html %}
+</html>

@@ -1,0 +1,30 @@
+{% include head.html %}
+{% include nav.html %}
+
+<body>
+  <header>
+  </header>   
+    <main>
+        <img src="/img/cookbook/{{page.chapter}}.png" style="max-width: 100%">
+    	<div class="content">
+    		<h2>{{page.chapter-title}} · {{page.title}}</h2>
+        {% if page.chapter != 'resources' %}
+            <div class="fullwidth"><img src="/cookbook/{{page.slug}}/img/output-all-{{page.chapter}}.png"></div>
+            {% endif %}
+    		{{content}}
+        {% if page.chapter == 'model' %}
+               <div class="fullwidth"><img src="/cookbook/{{page.slug}}/img/scheme.png"></div>
+               {% endif %}
+        </div>
+        <div class="button-cookbook" align="center">
+        <a href="/cookbook/{{page.slug}}/{{page.previous}}"><span class="icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a>
+        {% if page.chapter != 'resources' %}
+        <a href="/cookbook/{{page.slug}}/{{page.next}}"><span class="content">{{page.next-text}}</span><span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+        {% else' %}
+         <a href="/cookbook/overview"><span class="icon"><i class="fas fa-fast-backward" aria-hidden="true"></i></span></a>
+       {% endif %}
+        </div>
+</main>
+</body>
+{% include footer.html %}
+</html>
